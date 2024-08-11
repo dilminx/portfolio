@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="mb-4 text-4xl font-semibold">
           ABOUT
         </h2>
-        <h3 className="mb-6 text-4xl font-bold uppercase md:text-6xl lg:text-8xl">
+        <h3 className="mb-6 text-4xl font-bold uppercase md:text-4xl lg:text-8xl lg:font-normal">
           {ABOUT.text1}
         </h3>
         <p className="max-w-4xl mx-auto text-lg leading-loose md:text-xl">

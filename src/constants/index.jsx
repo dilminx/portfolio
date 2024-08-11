@@ -61,7 +61,7 @@ export const PROJECTS = [
     href:"https://github.com/dilminx/School-Management-System-Laravel-",
   },
   {
-    title: "Cuurency Checker",
+    title: "Currency Checker",
     subtitle: "A Cuurency Checker built with Ract and node express.",
     image: image3,
     href:"https://github.com/dilminx/Currency-checker",
