@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <>
-      <main className="overflow-x-hidden antialiased tracking-tighter text-gray-200 bg-gradient-to-b from-slate-800 to-black">
+      <main className="overflow-x-hidden text-gray-200 bg-gradient-to-b from-slate-800 to-black">
         <Navbar />
         <HeroSections />
         <About />
