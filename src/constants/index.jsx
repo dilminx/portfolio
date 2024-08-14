@@ -74,11 +74,11 @@ export const PROJECTS = [
     href: "",
   },
   {
-    title: "Weather Dashboard",
+    title: "Restuarent Web App",
     subtitle:
-      "A weather dashboard application built with Vue.js and Express.js.",
+      "A Restuarent Web App built with Next.js",
     image: image5,
-    href: "https://github.com/dilminx/whether-report",
+    href: "https://github.com/dilminx/Restuarent-web-app",
   },
 
   {
