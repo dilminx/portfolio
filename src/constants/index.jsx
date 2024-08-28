@@ -88,6 +88,13 @@ export const PROJECTS = [
     image: image6,
     href: "https://github.com/dilminx/TP-Contact_manager",
   },
+  {
+    title: "Live Chat App",
+    subtitle:
+      "A live chat application built with React using socket.io and node.js",
+    image: image7,
+    href: "https://react-chat-app-frontend-eight.vercel.app/",
+  },
 ];
 
 export const SKILLS = [
