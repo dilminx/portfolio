@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { NAVIGATION_LINKS } from "../constants";
-import cv from "../assets/Pasindu_Dilmin_Resume.pdf";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,10 +40,14 @@ const Navbar = () => {
           {NAVIGATION_LINKS.map((item, index) => (
             <li key={index}>
               <a
-                href={item.label === "Download Resume" ? cv : item.href}
-                onClick={(e) => handleClick(e, item.label === "Download Resume" ? cv : item.href)}
-                download={item.label === "Download Resume"}
-                className={`text-sm text-white transition duration-300 hover:text-red-600 ${item.label === "Download Resume" ? "bg-yellow-400 text-black py-2 px-4 rounded" : ""}`}
+                href={item.href}
+                onClick={(e) => handleClick(e, item.href)}
+                className={`block text-xl font-semibold text-white transition duration-300 hover:text-yellow-500 ${
+                  item.label === "Download Resume"
+                    ? "bg-yellow-400 text-black  py-2 px-4 rounded"
+                    : ""
+                }`}
+                download={item.label === "Resume"}
               >
                 {item.label}
               </a>
@@ -76,10 +79,14 @@ const Navbar = () => {
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
-                  href={item.label === "Download Resume" ? cv : item.href}
-                  onClick={(e) => handleClick(e, item.label === "Download Resume" ? cv : item.href)}
-                  download={item.label === "Download Resume"}
-                  className={`block text-xl font-semibold text-white transition duration-300 hover:text-red-600 ${item.label === "Download Resume" ? "bg-yellow-400 text-black py-2 px-4 rounded" : ""}`}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href)}
+                  className={`block text-xl font-semibold text-white transition duration-300 hover:text-yellow-500 ${
+                    item.label === "Download Resume"
+                      ? "bg-yellow-400 text-black  hover:text-red-600 py-2 px-4 rounded"
+                      : ""
+                  }`}
+                  download={item.label === "Resume"}
                 >
                   {item.label}
                 </a>
