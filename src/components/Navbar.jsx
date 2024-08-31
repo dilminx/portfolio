@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { NAVIGATION_LINKS } from "../constants";
+import cv from "../assets/Pasindu_Dilmin_Resume.pdf";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,6 +11,10 @@ const Navbar = () => {
   };
 
   const handleClick = (e, href) => {
+    if (href === cv) {
+      return;
+    }
+
     e.preventDefault();
     const targetElement = document.querySelector(href);
     if (targetElement) {
@@ -36,9 +41,10 @@ const Navbar = () => {
           {NAVIGATION_LINKS.map((item, index) => (
             <li key={index}>
               <a
-                href={item.href}
-                onClick={(e) => handleClick(e, item.href)}
-                className="text-sm text-white transition duration-300 hover:text-yellow-400"
+                href={item.label === "Download Resume" ? cv : item.href}
+                onClick={(e) => handleClick(e, item.label === "Download Resume" ? cv : item.href)}
+                download={item.label === "Download Resume"}
+                className={`text-sm text-white transition duration-300 hover:text-red-600 ${item.label === "Download Resume" ? "bg-yellow-400 text-black py-2 px-4 rounded" : ""}`}
               >
                 {item.label}
               </a>
@@ -54,7 +60,7 @@ const Navbar = () => {
             <h1 className="text-2xl">PASINDU DILMIN</h1>
           </a>
           <button
-            className="text-white "
+            className="text-white"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -70,9 +76,10 @@ const Navbar = () => {
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
-                  href={item.href}
-                  onClick={(e) => handleClick(e, item.href)}
-                  className="block text-xl font-semibold text-white transition duration-300 hover:text-yellow-400"
+                  href={item.label === "Download Resume" ? cv : item.href}
+                  onClick={(e) => handleClick(e, item.label === "Download Resume" ? cv : item.href)}
+                  download={item.label === "Download Resume"}
+                  className={`block text-xl font-semibold text-white transition duration-300 hover:text-red-600 ${item.label === "Download Resume" ? "bg-yellow-400 text-black py-2 px-4 rounded" : ""}`}
                 >
                   {item.label}
                 </a>

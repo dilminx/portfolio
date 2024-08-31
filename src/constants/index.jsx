@@ -20,7 +20,8 @@ import image4 from "../assets/project4.jpeg";
 import image5 from "../assets/project5.jpeg";
 import image6 from "../assets/project6.jpeg";
 import image7 from "../assets/project7.jpeg";
-import image8 from "../assets/project8.jpeg";
+import cv from "../assets/Pasindu_dilmin_resume.pdf";
+// import image8 from "../assets/project8.jpeg";
 
 // import user1 from "../assets/profile-pictures/user1.jpg";
 // import user2 from "../assets/profile-pictures/user2.jpg";
@@ -32,6 +33,7 @@ export const NAVIGATION_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contactform" },
+  { label: "Download Resume", href: cv },
 ];
 
 export const PROFILE = {
