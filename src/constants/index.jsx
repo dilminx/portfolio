@@ -100,7 +100,7 @@ export const PROJECTS = [
     title: "Next js ToDo",
     subtitle:
       "A Todo App built with Next using MonogoDb",
-    image: image7,
+    image: image8,
     href: "https://next-js-todo-lime.vercel.app/",
   },
 ];
