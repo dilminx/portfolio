@@ -20,7 +20,7 @@ import image4 from "../assets/project4.jpeg";
 import image5 from "../assets/project5.jpeg";
 import image6 from "../assets/project6.jpeg";
 import image7 from "../assets/project7.jpeg";
-// import image8 from "../assets/project8.jpeg";
+import image8 from "../assets/project8.jpeg";
 
 // import user1 from "../assets/profile-pictures/user1.jpg";
 // import user2 from "../assets/profile-pictures/user2.jpg";
@@ -95,6 +95,13 @@ export const PROJECTS = [
       "A live chat application built with React using socket.io and node.js",
     image: image7,
     href: "https://react-chat-app-frontend-eight.vercel.app/",
+  },
+  {
+    title: "Next js ToDo",
+    subtitle:
+      "A Todo App built with Next using MonogoDb",
+    image: image7,
+    href: "https://next-js-todo-lime.vercel.app/",
   },
 ];
 
