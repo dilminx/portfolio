@@ -13,7 +13,7 @@ const Card = ({ image, title, subtitle, link }) => {
           <img
             src={image}
             alt={title}
-            className="object-cover w-full"
+            className="object-cover w-full h-80"
           />
           <div className="absolute bottom-0 left-0 right-0 p-4 text-white bg-black bg-opacity-50">
             <h2 className="text-2xl font-bold">{title}</h2>
