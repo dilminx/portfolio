@@ -27,7 +27,7 @@ export const NAVIGATION_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contactform" },
-  { label: "Download Resume", href: "https://drive.google.com/file/d/1IQN5M6NoYsv-_9ipMhNMRJSSe0T2dJPg/view?usp=sharing" },
+  { label: "Download Resume", href: "https://drive.google.com/file/d/1OarVdluGXFLHzX4BiRIq6tuxo09EcYtr/view?usp=sharing" },
 ];
 
 export const PROFILE = {
