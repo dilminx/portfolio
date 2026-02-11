@@ -105,7 +105,7 @@ export const SKILLS = [
   {
     icon: <FaPhp className="text-4xl text-green-600 lg:text-6xl" />,
     name: "PHP",
-    experience: "1+ years",
+    experience: "2+ years",
   },
   {
     icon: <FaLaravel className="text-4xl text-green-600 lg:text-6xl" />,
@@ -142,7 +142,7 @@ export const SKILLS = [
   {
     icon: <FaDatabase className="text-4xl text-green-600 lg:text-6xl" />,
     name: "Mysql",
-    experience: "1+ years",
+    experience: "2+ years",
   },
 ];
 
