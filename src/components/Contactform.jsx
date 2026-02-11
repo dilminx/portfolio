@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -38,17 +39,15 @@ const Contactform = () => {
       setIsSending(true);
 
       emailjs.send(
-        "service_mklnxzo","template_jdzpeta", //EmailJS Service ID and template ID
+        "service_mklnxzo","template_jdzpeta", 
         formData,
-        '9W4HPBZdEWHbYzUn-' //EmailJS user ID
+        '9W4HPBZdEWHbYzUn-' 
       )
       .then((response) => {
-        console.log("Success:", response);
         toast.success("Message sent successfully");
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
-        console.log("Error:", error);
         toast.error("Failed to send message");
       })
       .finally(() => {
@@ -58,62 +57,81 @@ const Contactform = () => {
   };
 
   return (
-    <div className='max-w-3xl p-4 mx-auto ' id='contactform'>
-      <Toaster />
-      <h2 className='my-8 text-4xl tracking-tighter text-center'>Let's Connect</h2>
-      <form onSubmit={handleSubmit}>
-        <div className='mb-4'>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={formData.name}
-            placeholder="Name"
-            onChange={handleChange}
-            className="w-full px-3 py-2 mb-8 bg-transparent border border-gray-900 rounded-lg focus:border-gray-400"
-          
-          />
-          {error.name && (
-            <p className='text-sm text-pink-700'>{error.name}</p>
-          )}
-        </div>
-        <div className='mb-4'>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            placeholder="Email"
-            onChange={handleChange}
-            className="w-full px-3 py-2 mb-8 bg-transparent border border-gray-900 rounded-lg focus:border-gray-400"
-          />
-          {error.email && (
-            <p className='text-sm text-pink-700'>{error.email}</p>
-          )}
-        </div>
-        <div className='mb-4'>
-          <textarea
-            name="message"
-            id="message"
-            value={formData.message}
-            placeholder="Message"
-            onChange={handleChange}
-            rows="4"
-            className="w-full px-3 py-2 mb-8 bg-transparent border border-gray-900 rounded-lg focus:border-gray-400"
-          />
-          {error.message && (
-            <p className='text-sm text-pink-700'>{error.message}</p>
-          )}
-        </div>
-        <button
-          type='submit'
-          className='px-4 py-2 mb-8 text-black bg-yellow-600 hover:bg-yellow-300 lg:w-96 lg:mx-40'
-          disabled={isSending}
+    <section className='py-20' id='contactform'>
+      <div className="max-w-4xl px-4 mx-auto">
+        <Toaster />
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className='my-12 text-4xl font-bold tracking-tighter text-center text-white uppercase md:text-5xl'
         >
-          {isSending ? 'Sending...' : 'Send'}
-        </button>
-      </form>
-    </div>
+          Let's Connect
+        </motion.h2>
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.2, duration: 0.5 }}
+           viewport={{ once: true }}
+           className="p-8 glass-card rounded-3xl"
+        >
+          <form onSubmit={handleSubmit}>
+            <div className='mb-6'>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                placeholder="Name"
+                onChange={handleChange}
+                className="w-full px-4 py-3 text-white bg-slate-950/50 border border-slate-800 rounded-xl focus:border-indigo-500 focus:outline-none transition-all"
+              />
+              {error.name && (
+                <p className='mt-1 text-sm text-rose-500'>{error.name}</p>
+              )}
+            </div>
+            <div className='mb-6'>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={formData.email}
+                placeholder="Email"
+                onChange={handleChange}
+                className="w-full px-4 py-3 text-white bg-slate-950/50 border border-slate-800 rounded-xl focus:border-indigo-500 focus:outline-none transition-all"
+              />
+              {error.email && (
+                <p className='mt-1 text-sm text-rose-500'>{error.email}</p>
+              )}
+            </div>
+            <div className='mb-8'>
+              <textarea
+                name="message"
+                id="message"
+                value={formData.message}
+                placeholder="Message"
+                onChange={handleChange}
+                rows="5"
+                className="w-full px-4 py-3 text-white bg-slate-950/50 border border-slate-800 rounded-xl focus:border-indigo-500 focus:outline-none transition-all"
+              />
+              {error.message && (
+                <p className='mt-1 text-sm text-rose-500'>{error.message}</p>
+              )}
+            </div>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              type='submit'
+              className='w-full px-8 py-4 font-bold text-white bg-indigo-600 rounded-xl hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed'
+              disabled={isSending}
+            >
+              {isSending ? 'Sending...' : 'Send Message'}
+            </motion.button>
+          </form>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
