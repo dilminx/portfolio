@@ -21,13 +21,14 @@ import image4 from "../assets/project4.jpeg";
 import image5 from "../assets/project5.jpeg";
 import image6 from "../assets/project6.jpeg";
 import image7 from "../assets/poerfolio.jpg";
+import image8 from "../assets/project1.jpeg";
 
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contactform" },
-  { label: "Download Resume", href: "https://drive.google.com/file/d/12Sery1rr8sDVp0QvWxv7JEM4YFJauMNl/view?usp=sharing" },
+  { label: "Download Resume", href: "https://drive.google.com/file/d/17B1noqH8xl0taWqsP3pfLwYpboFm8PRc/view?usp=sharing" },
 ];
 
 export const PROFILE = {
@@ -44,60 +45,82 @@ export const ABOUT = {
 
 export const PROJECTS = [
   {
-    title: "Lanka Essentials E-commerce Platform",
-    subtitle:
-      "A comprehensive essentials delivery platform built with Laravel, Livewire, and MySQL. Features include optimized search, secure checkout, and a sleek modern UI.",
-    href: "http://lankanemart.linkpc.net./",
-    image: image_lanka,
+    category: "Self Projects",
+    projects: [
+      {
+        title: "Glenexa Business Platform",
+        subtitle:
+          "Built and deployed a professional business platform for Glenexa Ltd using Next.js and Resend API, featuring an automated inquiry system and optimized infrastructure on Hostinger.",
+        href: "https://glenexa.co.uk/",
+        image: image8,
+      },
+      {
+        title: "Lanka Essentials E-commerce Platform",
+        subtitle:
+          "A comprehensive essentials delivery platform built with Laravel, Livewire, and MySQL. Features include optimized search, secure checkout, and a sleek modern UI.",
+        href: "http://lankanessentials.run.place/",
+        image: image_lanka,
+      },
+      {
+        title: "Hospital & Lab Management System",
+        subtitle:
+          "A university project built with Laravel, Bootstrap, and MySQL to manage appointments, lab reports, and role-based access.",
+        href: "https://hospitalandlabsl.run.place./",
+        image: image3,
+      },
+      {
+        title: "Personal Portfolio",
+        subtitle:
+          "A personal portfolio website designed with React and Tailwind CSS to showcase projects and experience.",
+        href: "https://portfolio-psi-two-16.vercel.app/",
+        image: image7,
+      },
+    ],
   },
   {
-    title: "Overo Cargo",
-    subtitle:
-      "A freight and logistics management system built with Laravel and MySQL. Features shipment tracking, invoice management, and payment handling.",
-    href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
-    image: image1,
+    category: "Associate Software Career Projects",
+    projects: [
+      {
+        title: "Overo Cargo",
+        subtitle:
+          "A freight and logistics management system built with Laravel and MySQL. Features shipment tracking, invoice management, and payment handling.",
+        href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
+        image: image1,
+      },
+      {
+        title: "Falcon Ops Learning Hub",
+        subtitle:
+          "A training and learning management platform created with Laravel, Livewire, and MySQL. Includes course modules, reporting tools, and admin dashboards.",
+        href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
+        image: image2,
+      },
+      {
+        title: "LearningERP System Hitech Lanka",
+        subtitle:
+          "An enterprise resource planning system developed for HighTech Lanka using Laravel, Livewire, AJAX, and MySQL.",
+        href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
+        image: image4,
+      },
+    ],
   },
   {
-    title: "Falcon Ops Learning Hub",
-    subtitle:
-      "A training and learning management platform created with Laravel, Livewire, and MySQL. Includes course modules, reporting tools, and admin dashboards.",
-    href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
-    image: image2,
-  },
-  {
-    title: "LearningERP System Hitech Lanka",
-    subtitle:
-      "An enterprise resource planning system developed for HighTech Lanka using Laravel, Livewire, AJAX, and MySQL.",
-    href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
-    image: image4,
-  },
-  {
-    title: "Hospital & Lab Management System",
-    subtitle:
-      "A university project built with Laravel, Bootstrap, and MySQL to manage appointments, lab reports, and role-based access.",
-    href: "",
-    image: image3,
-  },
-  {
-    title: "Procurement ERP – Chandisa Company",
-    subtitle:
-      "Procurement management modules built during internship using Laravel, Livewire, and MySQL. Includes material requests and supplier integration.",
-    href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
-    image: image5,
-  },
-  {
-    title: "ERP System – Master Graphics Printers",
-    subtitle:
-      "ERP system developed during internship featuring MIS reporting, cheque management, and payroll automation.",
-    href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
-    image: image6,
-  },
-  {
-    title: "Personal Portfolio",
-    subtitle:
-      "A personal portfolio website designed with React and Tailwind CSS to showcase projects and experience.",
-    href: "https://portfolio-psi-two-16.vercel.app/",
-    image: image7,
+    category: "Internship Career Projects",
+    projects: [
+      {
+        title: "Procurement ERP – Chandisa Company",
+        subtitle:
+          "Procurement management modules built during internship using Laravel, Livewire, and MySQL. Includes material requests and supplier integration.",
+        href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
+        image: image5,
+      },
+      {
+        title: "ERP System – Master Graphics Printers",
+        subtitle:
+          "ERP system developed during internship featuring MIS reporting, cheque management, and payroll automation.",
+        href: "https://www.linkedin.com/in/pasindu-dilmin-6b728927b/details/projects/",
+        image: image6,
+      },
+    ],
   },
 ];
 
