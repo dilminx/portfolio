@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
+
+/// email web3form using
 
 const Contactform = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const Contactform = () => {
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validateErrors = validate();
     if (Object.keys(validateErrors).length > 0) {
@@ -38,21 +39,35 @@ const Contactform = () => {
       setError({});
       setIsSending(true);
 
-      emailjs.send(
-        "service_mklnxzo","template_jdzpeta", 
-        formData,
-        '9W4HPBZdEWHbYzUn-' 
-      )
-      .then((response) => {
-        toast.success("Message sent successfully");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((error) => {
+      const payload = {
+        access_key: "29750e25-9a6d-4389-8c5a-96e02f70924d",
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          toast.success("Message sent successfully");
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          toast.error(result.message || "Failed to send message");
+        }
+      } catch (error) {
         toast.error("Failed to send message");
-      })
-      .finally(() => {
+      } finally {
         setIsSending(false);
-      });
+      }
     }
   };
 
