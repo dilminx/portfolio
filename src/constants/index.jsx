@@ -181,7 +181,7 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://web.facebook.com/pasindu.minipura/",
+    href: "https://web.facebook.com/pasi.dilmin",
     icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
   },
 
