@@ -20,7 +20,7 @@ import image3 from "../assets/hospital.webp";
 import image4 from "../assets/project4.jpeg";
 import image5 from "../assets/project5.jpeg";
 import image6 from "../assets/project6.jpeg";
-import image7 from "../assets/poerfolio.jpg";
+import image7 from "../assets/profpic.jpg";
 import image8 from "../assets/project1.jpeg";
 
 export const NAVIGATION_LINKS = [
