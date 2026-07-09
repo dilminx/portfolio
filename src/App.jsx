@@ -9,15 +9,18 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <>
-      <main className="overflow-x-hidden text-gray-200 bg-gradient-to-b from-slate-800 to-black">
+      <main className="relative overflow-x-hidden text-slate-800 mesh-bg min-h-screen">
         <Navbar />
         <HeroSections />
+        <div className="section-divider my-4" />
         <About />
+        <div className="section-divider my-4" />
         <Projects />
+        <div className="section-divider my-4" />
         <Skills />
+        <div className="section-divider my-4" />
         <Contactform />
-        <Footer/>
-        
+        <Footer />
       </main>
     </>
   );

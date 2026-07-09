@@ -22,6 +22,7 @@ import image5 from "../assets/project5.jpeg";
 import image6 from "../assets/project6.jpeg";
 import image7 from "../assets/profpic.jpg";
 import image8 from "../assets/project1.jpeg";
+import image9 from "../assets/project2.jpeg";
 
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
@@ -47,6 +48,13 @@ export const PROJECTS = [
   {
     category: "Self Projects",
     projects: [
+      {
+        title: "Salon Glow Booking System",
+        subtitle:
+          "A comprehensive salon website and booking system developed with Laravel and MySQL. Hosted on Hostinger.",
+        href: "https://salonglow.glenexa.co.uk/",
+        image: image9,
+      },
       {
         title: "Glenexa Business Platform",
         subtitle:
@@ -126,17 +134,17 @@ export const PROJECTS = [
 
 export const SKILLS = [
   {
-    icon: <FaPhp className="text-4xl text-green-600 lg:text-6xl" />,
+    icon: <FaPhp className="text-4xl lg:text-6xl" style={{ color: '#777BB4' }} />,
     name: "PHP",
     experience: "2+ years",
   },
   {
-    icon: <FaLaravel className="text-4xl text-green-600 lg:text-6xl" />,
+    icon: <FaLaravel className="text-4xl lg:text-6xl" style={{ color: '#FF2D20' }} />,
     name: "LARAVEL",
     experience: "2+ years",
   },
   {
-    icon: <RiReactjsLine className="text-4xl lg:text-6xl text-cyan-400" />,
+    icon: <RiReactjsLine className="text-4xl lg:text-6xl" style={{ color: '#61DAFB' }} />,
     name: "React",
     experience: "1+ years",
   },
@@ -146,25 +154,23 @@ export const SKILLS = [
     experience: "6+ months",
   },
   {
-    icon: <SiMongodb className="text-4xl text-green-600 lg:text-6xl" />,
+    icon: <SiMongodb className="text-4xl lg:text-6xl" style={{ color: '#47A248' }} />,
     name: "MongoDB",
     experience: "6+ months",
   },
-
   {
-    icon: <FaNodeJs className="text-4xl text-green-600 lg:text-6xl" />,
+    icon: <FaNodeJs className="text-4xl lg:text-6xl" style={{ color: '#5FA04E' }} />,
     name: "Node.js",
     experience: "1+ years",
   },
-  
   {
-    icon: <FaServer className="text-4xl text-green-600 lg:text-6xl" />,
+    icon: <FaServer className="text-4xl lg:text-6xl" style={{ color: '#a78bfa' }} />,
     name: "Express.js",
     experience: "6+ months",
   },
   {
-    icon: <FaDatabase className="text-4xl text-green-600 lg:text-6xl" />,
-    name: "Mysql",
+    icon: <FaDatabase className="text-4xl lg:text-6xl" style={{ color: '#4479A1' }} />,
+    name: "MySQL",
     experience: "2+ years",
   },
 ];

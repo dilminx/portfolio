@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
 
-/// email web3form using
-
 const Contactform = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,7 +13,7 @@ const Contactform = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({...formData, [name]: value,});
+    setFormData({ ...formData, [name]: value, });
   };
 
   const validate = () => {
@@ -72,76 +70,127 @@ const Contactform = () => {
   };
 
   return (
-    <section className='py-20' id='contactform'>
-      <div className="max-w-4xl px-4 mx-auto">
-        <Toaster />
-        <motion.h2 
+    <section className='py-20 relative' id='contactform'>
+      {/* Background accent */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-96 h-96 bg-blue-300 rounded-full filter blur-[200px] opacity-40"></div>
+
+      <div className="max-w-4xl px-4 mx-auto relative z-10">
+        <Toaster
+          toastOptions={{
+            style: {
+              background: '#ffffff',
+              color: '#0f172a',
+              border: '1px solid rgba(37, 99, 235, 0.2)',
+            }
+          }}
+        />
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className='my-12 text-4xl font-bold tracking-tighter text-center text-white uppercase md:text-5xl'
+          className="flex items-center justify-center gap-4 my-12"
         >
-          Let's Connect
-        </motion.h2>
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500/50"></div>
+          <h2 className='text-4xl font-bold tracking-tighter text-center text-slate-900 uppercase md:text-5xl'>
+            Let's Connect
+          </h2>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500/50"></div>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center text-slate-600 mb-10 text-lg max-w-2xl mx-auto"
+        >
+          Have a project in mind or want to collaborate? Drop me a message and I'll get back to you shortly.
+        </motion.p>
+
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.2, duration: 0.5 }}
-           viewport={{ once: true }}
-           className="p-8 glass-card rounded-3xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="p-8 glass-card-glow rounded-3xl gradient-border shadow-sm"
         >
           <form onSubmit={handleSubmit}>
             <div className='mb-6'>
+              <label htmlFor="contact-name" className="block text-sm font-semibold text-slate-500 uppercase tracking-widest mb-2">
+                Your Name
+              </label>
               <input
                 type="text"
                 name="name"
-                id="name"
+                id="contact-name"
                 value={formData.name}
-                placeholder="Name"
+                placeholder="John Doe"
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-white bg-slate-950/50 border border-slate-800 rounded-xl focus:border-indigo-500 focus:outline-none transition-all"
+                className="w-full px-5 py-3.5 text-slate-800 bg-white border border-slate-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all input-glow placeholder-slate-400"
               />
               {error.name && (
-                <p className='mt-1 text-sm text-rose-500'>{error.name}</p>
+                <p className='mt-1.5 text-sm text-rose-500 flex items-center gap-1'>
+                  <span>⚠</span> {error.name}
+                </p>
               )}
             </div>
             <div className='mb-6'>
+              <label htmlFor="contact-email" className="block text-sm font-semibold text-slate-500 uppercase tracking-widest mb-2">
+                Email Address
+              </label>
               <input
                 type="email"
                 name="email"
-                id="email"
+                id="contact-email"
                 value={formData.email}
-                placeholder="Email"
+                placeholder="john@example.com"
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-white bg-slate-950/50 border border-slate-800 rounded-xl focus:border-indigo-500 focus:outline-none transition-all"
+                className="w-full px-5 py-3.5 text-slate-800 bg-white border border-slate-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all input-glow placeholder-slate-400"
               />
               {error.email && (
-                <p className='mt-1 text-sm text-rose-500'>{error.email}</p>
+                <p className='mt-1.5 text-sm text-rose-500 flex items-center gap-1'>
+                  <span>⚠</span> {error.email}
+                </p>
               )}
             </div>
             <div className='mb-8'>
+              <label htmlFor="contact-message" className="block text-sm font-semibold text-slate-500 uppercase tracking-widest mb-2">
+                Your Message
+              </label>
               <textarea
                 name="message"
-                id="message"
+                id="contact-message"
                 value={formData.message}
-                placeholder="Message"
+                placeholder="Tell me about your project..."
                 onChange={handleChange}
                 rows="5"
-                className="w-full px-4 py-3 text-white bg-slate-950/50 border border-slate-800 rounded-xl focus:border-indigo-500 focus:outline-none transition-all"
+                className="w-full px-5 py-3.5 text-slate-800 bg-white border border-slate-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all input-glow placeholder-slate-400 resize-none"
               />
               {error.message && (
-                <p className='mt-1 text-sm text-rose-500'>{error.message}</p>
+                <p className='mt-1.5 text-sm text-rose-500 flex items-center gap-1'>
+                  <span>⚠</span> {error.message}
+                </p>
               )}
             </div>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type='submit'
-              className='w-full px-8 py-4 font-bold text-white bg-indigo-600 rounded-xl hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20 disabled:opacity-50 disabled:cursor-not-allowed'
+              id="contact-submit"
+              className='w-full px-8 py-4 font-bold text-white bg-gradient-to-r from-blue-600 to-sky-500 rounded-xl hover:from-blue-500 hover:to-sky-400 transition-all shadow-lg shadow-blue-500/20 disabled:opacity-50 disabled:cursor-not-allowed'
               disabled={isSending}
             >
-              {isSending ? 'Sending...' : 'Send Message'}
+              {isSending ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                  Sending...
+                </span>
+              ) : 'Send Message →'}
             </motion.button>
           </form>
         </motion.div>
