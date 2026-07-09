@@ -41,7 +41,7 @@ export const ABOUT = {
   text1:
     "I build dynamic, responsive, and scalable web applications that combine creativity with performance.",
   text2:
-    "Hello! I'm Pasindu Dilmin, an Associate Software Engineer at Metrocoding. I specialize in crafting high-impact digital experiences using Laravel and the MERN stack. Recently, I developed the 'Lanka Essentials' E-commerce platform, focusing on seamless user journeys and robust backend architecture. My expertise spans across Livewire, React, and modern CSS frameworks, with a passion for clean code and AI-integrated development. I thrive on solving complex problems and delivering premium software solutions that drive real-world value.",
+    "Hello! I'm Pasindu Dilmin, an Associate Software Engineer. I specialize in crafting high-impact digital experiences using Laravel and the MERN stack. Recently, I developed the 'Lanka Essentials' E-commerce platform, focusing on seamless user journeys and robust backend architecture. My expertise spans across Livewire, Next.js, and modern CSS frameworks, with a passion for clean code and AI-integrated development. I thrive on solving complex problems and delivering premium software solutions that drive real-world value.",
 };
 
 export const PROJECTS = [

@@ -71,7 +71,7 @@ const HeroSections = () => {
         >
           {PROFILE.info} — Building the future of the web with{" "}
           <span className="text-blue-600 font-semibold">Laravel</span> &{" "}
-          <span className="text-sky-500 font-semibold">React</span>.
+          <span className="text-sky-500 font-semibold">Next.js</span>.
         </motion.p>
 
         <motion.div

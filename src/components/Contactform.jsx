@@ -58,6 +58,7 @@ const Contactform = () => {
         if (result.success) {
           toast.success("Message sent successfully");
           setFormData({ name: "", email: "", message: "" });
+          window.scrollTo({ top: 0, behavior: "smooth" });
         } else {
           toast.error(result.message || "Failed to send message");
         }
@@ -74,13 +75,17 @@ const Contactform = () => {
       {/* Background accent */}
       <div className="absolute left-1/2 -translate-x-1/2 top-0 w-96 h-96 bg-blue-300 rounded-full filter blur-[200px] opacity-40"></div>
 
-      <div className="max-w-4xl px-4 mx-auto relative z-10">
+      <div className="max-w-4xl my-20 px-4 mx-auto relative z-10">
         <Toaster
+          position="bottom-center"
           toastOptions={{
+            duration: 5000, // Show for 5 seconds
             style: {
-              background: '#ffffff',
+              background: '#7ff6b3', // Solid green background (removed alpha)
               color: '#0f172a',
               border: '1px solid rgba(37, 99, 235, 0.2)',
+              fontSize: '13px',
+              padding: '8px 16px',
             }
           }}
         />
